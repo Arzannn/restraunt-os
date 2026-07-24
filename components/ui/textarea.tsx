@@ -1,0 +1,3 @@
+import { cva, type VariantProps } from 'class-variance-authority';import { TextareaHTMLAttributes } from 'react';import { cn } from '@/lib/utils';
+const textareaVariants=cva('min-h-32 w-full rounded-2xl border bg-white/5 px-4 py-3 text-white outline-none placeholder:text-white/40 focus:border-[#d6a84f]',{variants:{variant:{glass:'border-white/15',solid:'border-white/10 bg-black/40'}},defaultVariants:{variant:'glass'}});
+export type TextareaProps=TextareaHTMLAttributes<HTMLTextAreaElement>&VariantProps<typeof textareaVariants>;export function Textarea({className,variant,...props}:TextareaProps){return <textarea className={cn(textareaVariants({variant}),className)} {...props}/>}

@@ -1,0 +1,3 @@
+import { cva, type VariantProps } from 'class-variance-authority';import { HTMLAttributes } from 'react';import { cn } from '@/lib/utils';
+const cardVariants=cva('rounded-3xl', {variants:{variant:{glass:'glass',solid:'bg-[#0d0d0d] border border-white/10',gold:'bg-[#d6a84f] text-black'},padding:{none:'p-0',md:'p-6',lg:'p-8'}},defaultVariants:{variant:'glass',padding:'md'}});
+export type CardProps=HTMLAttributes<HTMLDivElement>&VariantProps<typeof cardVariants>;export function Card({className,variant,padding,...props}:CardProps){return <div className={cn(cardVariants({variant,padding}),className)} {...props}/>}

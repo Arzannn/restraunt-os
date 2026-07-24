@@ -1,0 +1,2 @@
+'use client';import { cva, type VariantProps } from 'class-variance-authority';import { ReactNode } from 'react';import { cn } from '@/lib/utils';
+const drawerVariants=cva('fixed right-0 top-0 z-50 h-full w-80 glass p-6 transition-transform',{variants:{side:{right:'right-0',left:'left-0'}}});export function Drawer({open,children,side='right'}:{open:boolean;children:ReactNode}&VariantProps<typeof drawerVariants>){return <aside className={cn(drawerVariants({side}),open?'translate-x-0':'translate-x-full')} aria-hidden={!open}>{children}</aside>}

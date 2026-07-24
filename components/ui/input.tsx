@@ -1,0 +1,3 @@
+import { cva, type VariantProps } from 'class-variance-authority';import { InputHTMLAttributes } from 'react';import { cn } from '@/lib/utils';
+const inputVariants=cva('w-full rounded-2xl border bg-white/5 px-4 py-3 text-white outline-none placeholder:text-white/40 focus:border-[#d6a84f]',{variants:{variant:{glass:'border-white/15',solid:'border-white/10 bg-black/40'}},defaultVariants:{variant:'glass'}});
+export type InputProps=InputHTMLAttributes<HTMLInputElement>&VariantProps<typeof inputVariants>;export function Input({className,variant,...props}:InputProps){return <input className={cn(inputVariants({variant}),className)} {...props}/>}
