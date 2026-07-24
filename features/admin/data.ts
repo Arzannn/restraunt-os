@@ -1,0 +1,3 @@
+import { CalendarCheck, DollarSign, ShoppingBag, Users } from 'lucide-react';import type { Activity, Metric } from '@/types';
+export const metrics: Metric[]=[{label:'Revenue',value:'$84,230',delta:'+18.4%',icon:DollarSign},{label:'Orders',value:'1,248',delta:'+9.1%',icon:ShoppingBag},{label:'Reservations',value:'326',delta:'+12.0%',icon:CalendarCheck},{label:'Visitors',value:'42.8k',delta:'+31.2%',icon:Users}];
+export const activity: Activity[]=[{id:'1',title:'VIP reservation confirmed',time:'2m ago',detail:'Chef table for 6 at 8:30 PM.'},{id:'2',title:'Menu collection published',time:'18m ago',detail:'Summer omakase tasting menu went live.'},{id:'3',title:'Cloudinary media synced',time:'44m ago',detail:'18 optimized gallery assets prepared.'}];

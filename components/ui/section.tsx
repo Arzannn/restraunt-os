@@ -1,0 +1,2 @@
+import { cva, type VariantProps } from 'class-variance-authority';import { HTMLAttributes } from 'react';import { cn } from '@/lib/utils';
+const sectionVariants=cva('relative',{variants:{spacing:{sm:'py-12',md:'py-20',lg:'py-28'}},defaultVariants:{spacing:'md'}});export type SectionProps=HTMLAttributes<HTMLElement>&VariantProps<typeof sectionVariants>;export function Section({className,spacing,...props}:SectionProps){return <section className={cn(sectionVariants({spacing}),className)} {...props}/>}
